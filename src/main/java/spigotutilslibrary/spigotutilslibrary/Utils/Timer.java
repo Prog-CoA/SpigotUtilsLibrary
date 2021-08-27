@@ -20,10 +20,12 @@ public class Timer {
     protected BukkitRunnable countUp;
 
     public Timer(JavaPlugin plugin){
+
         this(plugin, 100, 180, 0, ChatColor.YELLOW + "カウントが終了しました");
     }
 
     public Timer(JavaPlugin plugin, int count){
+
         this(plugin, count, 180, 0, ChatColor.YELLOW + "カウントが終了しました");
     }
 
