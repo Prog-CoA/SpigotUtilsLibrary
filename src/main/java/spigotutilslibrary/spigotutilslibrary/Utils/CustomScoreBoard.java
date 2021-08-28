@@ -1,7 +1,6 @@
 package spigotutilslibrary.spigotutilslibrary.Utils;
 
 import org.bukkit.Bukkit;
-import org.bukkit.entity.Player;
 import org.bukkit.scoreboard.*;
 
 import java.util.HashMap;
@@ -10,9 +9,9 @@ import java.util.Map;
 @SuppressWarnings("all")
 public class CustomScoreBoard {
 
-    private ScoreboardManager manager;
-    private Scoreboard board;
-    private Objective object;
+    private final ScoreboardManager manager;
+    private final Scoreboard board;
+    private final Objective object;
 
     private final Map<String, Score> map = new HashMap<>();
 
@@ -43,14 +42,21 @@ public class CustomScoreBoard {
         return map.get(id).getScore();
     }
 
-    //スコアボード取得
+    //スコアボード表示
     public void show(){
         object.setDisplaySlot(DisplaySlot.SIDEBAR);
     }
 
+    //スコアボード非表示
+    public void hide(){
+        object.setDisplaySlot(null);
+    }
+
     //終了処理
     public void shutdown(){
-        object.getScoreboard().resetScores(map.get(map.keySet()).getEntry());
+        for(String name : map.keySet()){
+            object.getScoreboard().resetScores(map.get(name).getEntry());
+        }
         object.unregister();
     }
 }
