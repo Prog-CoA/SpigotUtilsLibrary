@@ -27,7 +27,7 @@ public class CustomScoreBoard {
         object.setDisplayName(name);
     }
 
-    //スコア追加
+    //スコアを追加
     public void addScore(String id, String name){
         map.put(id, object.getScore(name));
     }

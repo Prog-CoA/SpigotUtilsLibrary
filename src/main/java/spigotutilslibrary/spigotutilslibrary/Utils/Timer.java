@@ -21,7 +21,7 @@ public class Timer {
 
     public Timer(JavaPlugin plugin){
 
-        this(plugin, 100, 180, 0, ChatColor.YELLOW + "カウントが終了しました");
+        this(plugin, 90, 180, 0, ChatColor.YELLOW + "カウントが終了しました");
     }
 
     public Timer(JavaPlugin plugin, int count){
@@ -41,6 +41,46 @@ public class Timer {
         this.message = message;
 
         setting();
+    }
+
+    //countを設定
+    public void setCount(int count){
+        this.count = count;
+    }
+
+    //countを取得
+    public int getCount(){
+        return count;
+    }
+
+    //Maxを設定
+    public void setMax(int Max){
+        this.Max = Max;
+    }
+
+    //Maxを取得
+    public int getMax(){
+        return Max;
+    }
+
+    //Minimumを設定
+    public void setMinimum(int minimum){
+        this.Minimum = minimum;
+    }
+
+    //MInimumを取得
+    public int getMinimum(){
+        return Minimum;
+    }
+
+    //messageを設定
+    public void setMessage(String message){
+        this.message = message;
+    }
+
+    //messageを取得
+    public String getMessage(){
+        return message;
     }
 
     //カウントダウン
