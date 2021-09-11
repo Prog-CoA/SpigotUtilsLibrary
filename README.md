@@ -1,10 +1,8 @@
-# SpigotUtilsLibrary
-
 # Overview
 
-クラスの概要
-
 ## CustomScoreBoard
+
+スコアボードを簡単に作成するためのクラス
 
 ```Java
 
@@ -39,6 +37,8 @@ scoreBoard.shutdown();
 ```
 
 ## Timer
+
+Timerを設定するクラス
 
 ```Java
 
@@ -100,3 +100,45 @@ timer.getCountUp().cancel();
 
 ```
 
+## CustomItem
+
+[M1n1don/ItemUtility](https://github.com/M1n1don/ItemUtility)
+
+## Function
+
+Worldに対して処理を行うためのクラス
+
+```Java
+
+//LocationのブロックをMaterialに変更
+Function.setBlock(Material, Location);
+
+//name: Worldの名前
+//type: WorldType
+//worldを新規作成
+Function.createWorld(String name, WorldType type);
+
+```
+
+## LocationData
+
+Locationに対して処理を行うためのクラス
+
+```Java
+
+//Location追加
+LocationData.add(Location);
+
+//Location削除
+LocationData.remove(Location);
+
+//追加されているLocationのListを取得
+LocationData.getList();
+
+//追加されているLocation全てにDataFuncを実行
+LocationData.RUN(DataFunc);
+
+//LocationにDataFuncを実行する
+LocationData.RUN(Location, DataFunc);
+
+```
