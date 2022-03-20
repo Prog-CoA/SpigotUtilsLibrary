@@ -1,8 +1,6 @@
-package spigotutilslibrary.spigotutilslibrary;
+package org.progcoa.spigotutils;
 
-import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
-import spigotutilslibrary.spigotutilslibrary.Utils.Timer;
 
 public final class Main extends JavaPlugin {
 
